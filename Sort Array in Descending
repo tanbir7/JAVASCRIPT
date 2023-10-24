@@ -1,0 +1,17 @@
+// Get user input as a comma-separated string
+let userInput = prompt("Enter numbers separated by commas:");
+
+// Split the input string into an array of strings
+let numbersArray = userInput.split(',');
+
+// Parse the array elements as numbers
+for (let i = 0; i < numbersArray.length; i++) {
+    numbersArray[i] = parseInt(numbersArray[i].trim(), 10);
+}
+
+// Sorting the array in descending order
+numbersArray.sort(function(a, b) {
+    return b - a;
+});
+
+console.log("Sorted array in descending order: " + numbersArray);
